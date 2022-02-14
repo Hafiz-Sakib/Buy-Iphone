@@ -32,21 +32,21 @@
 
                 <div class="col-md-5 center-item">
                   <div class="input-group number-spinner">
-                    <button class="btn btn-default">
+                    <button class="btn btn-default" id="phone-minus">
                       <i class="fas fa-minus"></i>
                     </button>
                     <input
                       type="number"
                       min="0"
                       class="form-control text-center"
-                      id=""
+                      id="phone-number"
                       value="1"
                     />
-                    <button class="btn btn-default">
+                    <button class="btn btn-default" id="phone-plus">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$1219</h5>
+                  <h5>$<span id="phone-total">1219</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -67,7 +67,7 @@
                       type="number"
                       min="0"
                       class="form-control text-center"
-                      id="case-input"
+                      id="case-number"
                       value="1"
                     />
                     <button class="btn btn-default" id="case-plus">
