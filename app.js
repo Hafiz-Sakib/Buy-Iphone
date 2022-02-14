@@ -17,6 +17,25 @@ function updateProductInfo(
   //Update CaseTotal
   const productNewPrice = document.getElementById(productPriceId);
   productNewPrice.innerText = productQuantity * productPrice;
+
+  //update SubTotal
+  calculateTotal();
+}
+function getinputValue(productInputFieldId) {
+  const productInput = document.getElementById(productInputFieldId);
+  const productNumber = parseInt(productInput.value);
+  return productNumber;
+}
+function calculateTotal() {
+  const phoneTotal = getinputValue("phone-number") * 1219;
+  const caseTotal = getinputValue("case-number") * 59;
+  subTotal = phoneTotal + caseTotal;
+  const tax = subTotal * 0.1;
+  const totalPrice = subTotal + tax;
+  //Update On HTML
+  document.getElementById("sub-total").innerText = subTotal;
+  document.getElementById("tax-amount").innerText = tax;
+  document.getElementById("total-price").innerText = totalPrice;
 }
 
 //handle phone event Handler
